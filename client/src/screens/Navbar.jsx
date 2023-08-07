@@ -27,7 +27,7 @@ const Center = () => (
       <option value="">1</option>
       <option value="">2</option>
     </Select>
-    <Input bg={"white"} placeholder="Search Amazon.in" rounded={"none"}></Input>
+    <Input bg={"white"} placeholder="Search bigDeals.in" rounded={"none"}></Input>
     <Button rounded={"none"} bg={"#dd7e13"} color={"black"} roundedRight={"md"}>
       <SearchIcon />
     </Button>

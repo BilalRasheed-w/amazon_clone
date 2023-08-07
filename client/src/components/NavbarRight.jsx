@@ -10,11 +10,10 @@ import {
   Button,
   Radio,
   Heading,
-  Icon
+  Icon,
 } from "@chakra-ui/react";
 import { TriangleDownIcon } from "@chakra-ui/icons";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
-
 
 const randomId = () => crypto.randomUUID();
 
