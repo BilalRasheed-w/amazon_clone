@@ -82,7 +82,7 @@ const Language = ({ name }) => (
 
 const NavbarRight = () => {
   return (
-    <>
+    <HStack >
       {/* //# languages  */}
       <HStack
         width={"75px"}
@@ -90,7 +90,7 @@ const NavbarRight = () => {
         mt={2}
         py={3}
         px={2}
-        _hover={{ outline: "1px solid white" }}
+        _hover={{ outline: "1px solid white",rounded:'sm' }}
       >
         <Img h={"17px"} w={"25px"} bg={"red"} />
         <Text
@@ -155,7 +155,7 @@ const NavbarRight = () => {
         py={3}
         px={1}
         pos={"relative"}
-        _hover={{ outline: "1px solid white" }}
+        _hover={{ outline: "1px solid white",rounded:'sm' }}
       >
         <Text pos={"absolute"} fontSize={"12px"} top={"8px"} right={"61px"}>
           Hello,sign in
@@ -163,8 +163,8 @@ const NavbarRight = () => {
         <Text fontSize={"14px"} fontWeight={"bold"} mt={2}>
           Account & Lists
         </Text>
-        <Menu>
-          <MenuButton
+        <Menu  >
+          <MenuButton 
             as={Button}
             rightIcon={<TriangleDownIcon fontSize={"8px"} />}
             bg={"transparent"}
@@ -176,7 +176,7 @@ const NavbarRight = () => {
           >
             <HStack spacing={1}></HStack>
           </MenuButton>
-          <MenuList color={"black"} p={0} w={"500px"}>
+          <MenuList  color={"black"} p={0} position={'absolute'} top={'-5px'} left={'-350px'} w={'500px'} >
             <VStack spacing={0} py={2}>
               <Button bg={"#97800a"} fontWeight={"600"} width={"200px"}>
                 Sign In
@@ -221,8 +221,8 @@ const NavbarRight = () => {
 
       <HStack
         py={3}
-        pl={"3px"}
-        _hover={{ outline: "1px solid white" }}
+              pl={"3px"}
+        _hover={{ outline: "1px solid white",rounded:'sm' }}
         pos={"relative"}
       >
         <Text pos={"absolute"} fontSize={"12px"} top={"11px"} right={"37px"}>
@@ -234,7 +234,7 @@ const NavbarRight = () => {
       </HStack>
 
       {/* //# cart */}
-      <HStack id="right" spacing={0} width={"78px"} pos={"relative"}>
+      <HStack id="right" spacing={0} width={"78px"} pos={"relative"} _hover={{outline:'1px solid white'}} >
         <Icon as={PiShoppingCartSimpleBold} fontSize={"40px"} />
         <Text fontSize={"14px"} fontWeight={"bold"} mt={3}>
           Cart
@@ -251,7 +251,7 @@ const NavbarRight = () => {
           0
         </Text>
       </HStack>
-    </>
+    </HStack>
   );
 };
 

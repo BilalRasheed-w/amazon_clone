@@ -12,7 +12,6 @@ import { SearchIcon } from "@chakra-ui/icons";
 import { CiLocationOn } from "react-icons/ci";
 import NavbarRight from "../components/NavbarRight";
 
-
 const Center = () => (
   <HStack gap={0} id="center" w={"535px"}>
     <Select
@@ -27,7 +26,11 @@ const Center = () => (
       <option value="">1</option>
       <option value="">2</option>
     </Select>
-    <Input bg={"white"} placeholder="Search bigDeals.in" rounded={"none"}></Input>
+    <Input
+      bg={"white"}
+      placeholder="Search bigDeals.in"
+      rounded={"none"}
+    ></Input>
     <Button rounded={"none"} bg={"#dd7e13"} color={"black"} roundedRight={"md"}>
       <SearchIcon />
     </Button>
@@ -41,6 +44,7 @@ const Navbar = () => {
       color={"white"}
       id="left"
       h={"10vh"}
+      w={"100vw"}
       px={"10px"}
       justifyContent={"space-between"}
     >
@@ -52,8 +56,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
 
 const Left = () => (
   <>
