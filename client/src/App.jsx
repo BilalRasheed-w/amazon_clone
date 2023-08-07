@@ -10,6 +10,7 @@ const App = () => {
       <Navbar />
       <BreadCrumb />
       <Routes>
+      <Route path="/" element={<Hero />} />
       </Routes>
     </Router>
   );
