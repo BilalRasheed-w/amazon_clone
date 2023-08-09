@@ -15,41 +15,39 @@ import {
 import { TriangleDownIcon } from "@chakra-ui/icons";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
 
-const randomId = () => crypto.randomUUID();
-
 //@ multiple arrays
 
 const languagesArray = [
-  { id: randomId, name: "हिंदी - hi" },
-  { id: randomId, name: "తెలుగు - te" },
-  { id: randomId, name: "தமிழ் - ta" },
-  { id: randomId, name: "தமிழ் - ta" },
-  { id: randomId, name: "ಕನ್ನಡ - kn" },
-  { id: randomId, name: "മാല്യം - ml" },
-  { id: randomId, name: "বাংলা - bn" },
-  { id: randomId, name: "मराठी - mr" },
+  { id: 1, name: "हिंदी - hi" },
+  { id: 2, name: "తెలుగు - te" },
+  { id: 3, name: "தமிழ் - ta" },
+  { id: 4, name: "தமிழ் - ta" },
+  { id: 5, name: "ಕನ್ನಡ - kn" },
+  { id: 6, name: "മാല്യം - ml" },
+  { id: 7, name: "বাংলা - bn" },
+  { id: 8, name: "मराठी - mr" },
 ];
 
 const yourLists = [
-  { id: randomId, name: "create a wish list" },
-  { id: randomId, name: "wish from any website" },
-  { id: randomId, name: "baby wishlist" },
-  { id: randomId, name: "discover your style" },
-  { id: randomId, name: "explore showroom" },
+  { id: 9, name: "create a wish list" },
+  { id: 10, name: "wish from any website" },
+  { id: 11, name: "baby wishlist" },
+  { id: 12, name: "discover your style" },
+  { id: 13, name: "explore showroom" },
 ];
 
 const yourAccount = [
-  { id: randomId, name: "your account" },
-  { id: randomId, name: "your orders" },
-  { id: randomId, name: "your wishlist" },
-  { id: randomId, name: "your recommendation" },
-  { id: randomId, name: "your prime membership" },
-  { id: randomId, name: "your prime video" },
-  { id: randomId, name: "your subscribe and save items" },
-  { id: randomId, name: "membership and subscriptions " },
-  { id: randomId, name: "your seller account" },
-  { id: randomId, name: "manage your content and devices" },
-  { id: randomId, name: "your free amazon buisness account " },
+  { id: 1, name: "your orders" },
+  { id: 2, name: "your account" },
+  { id: 3, name: "your wishlist" },
+  { id: 4, name: "your recommendation" },
+  { id: 5, name: "your prime membership" },
+  { id: 6, name: "your prime video" },
+  { id: 7, name: "your subscribe and save items" },
+  { id: 8, name: "membership and subscriptions " },
+  { id: 9, name: "your seller account" },
+  { id: 10, name: "manage your content and devices" },
+  { id: 11, name: "your free amazon buisness account " },
 ];
 
 // @  styling components
@@ -82,7 +80,7 @@ const Language = ({ name }) => (
 
 const NavbarRight = () => {
   return (
-    <HStack >
+    <HStack>
       {/* //# languages  */}
       <HStack
         width={"75px"}
@@ -90,7 +88,8 @@ const NavbarRight = () => {
         mt={2}
         py={3}
         px={2}
-        _hover={{ outline: "1px solid white",rounded:'sm' }}
+        pos={"relative"}
+        _hover={{ outline: "1px solid white", rounded: "sm" }}
       >
         <Img h={"17px"} w={"25px"} bg={"red"} />
         <Text
@@ -110,8 +109,8 @@ const NavbarRight = () => {
             color={"white"}
             variant={"unstyled"}
             pos={"absolute"}
-            top={"19px"}
-            right={"323px"}
+            top={"7px"}
+            right={"-3px"}
           ></MenuButton>
           <MenuList color={"black"}>
             <VStack alignItems={"flex-start"} px={"20px"}>
@@ -155,7 +154,7 @@ const NavbarRight = () => {
         py={3}
         px={1}
         pos={"relative"}
-        _hover={{ outline: "1px solid white",rounded:'sm' }}
+        _hover={{ outline: "1px solid white", rounded: "sm" }}
       >
         <Text pos={"absolute"} fontSize={"12px"} top={"8px"} right={"61px"}>
           Hello,sign in
@@ -163,8 +162,8 @@ const NavbarRight = () => {
         <Text fontSize={"14px"} fontWeight={"bold"} mt={2}>
           Account & Lists
         </Text>
-        <Menu  >
-          <MenuButton 
+        <Menu>
+          <MenuButton
             as={Button}
             rightIcon={<TriangleDownIcon fontSize={"8px"} />}
             bg={"transparent"}
@@ -176,7 +175,14 @@ const NavbarRight = () => {
           >
             <HStack spacing={1}></HStack>
           </MenuButton>
-          <MenuList  color={"black"} p={0} position={'absolute'} top={'-5px'} left={'-350px'} w={'500px'} >
+          <MenuList
+            color={"black"}
+            p={0}
+            position={"absolute"}
+            top={"-5px"}
+            left={"-350px"}
+            w={"500px"}
+          >
             <VStack spacing={0} py={2}>
               <Button bg={"#97800a"} fontWeight={"600"} width={"200px"}>
                 Sign In
@@ -221,8 +227,8 @@ const NavbarRight = () => {
 
       <HStack
         py={3}
-              pl={"3px"}
-        _hover={{ outline: "1px solid white",rounded:'sm' }}
+        pl={"3px"}
+        _hover={{ outline: "1px solid white", rounded: "sm" }}
         pos={"relative"}
       >
         <Text pos={"absolute"} fontSize={"12px"} top={"11px"} right={"37px"}>
@@ -234,7 +240,13 @@ const NavbarRight = () => {
       </HStack>
 
       {/* //# cart */}
-      <HStack id="right" spacing={0} width={"78px"} pos={"relative"} _hover={{outline:'1px solid white'}} >
+      <HStack
+        id="right"
+        spacing={0}
+        width={"78px"}
+        pos={"relative"}
+        _hover={{ outline: "1px solid white" }}
+      >
         <Icon as={PiShoppingCartSimpleBold} fontSize={"40px"} />
         <Text fontSize={"14px"} fontWeight={"bold"} mt={3}>
           Cart

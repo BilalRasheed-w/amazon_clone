@@ -55,7 +55,7 @@ export const DrawerMenu = () => {
       <HStack
         spacing={"1px"}
         px={2}
-        py={2}
+        py={1}
         onClick={onOpen}
         cursor={"pointer"}
         _hover={{ outline: "1px solid white", rounded: "sm" }}

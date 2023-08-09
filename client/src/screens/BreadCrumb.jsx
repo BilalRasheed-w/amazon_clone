@@ -13,89 +13,86 @@ import {
 import { AddIcon, TriangleDownIcon } from "@chakra-ui/icons";
 import { DrawerMenu } from "../components/DrawerMenu";
 
-const randomId = () => crypto.randomUUID();
+
 
 const AllMenus1 = [
-  { id: randomId, name: "amazon miniTV" },
-  { id: randomId, name: "sell" },
-  { id: randomId, name: "best sellers" },
-  { id: randomId, name: "today's deals" },
-  { id: randomId, name: "mobiles" },
-  { id: randomId, name: "new releases" },
-  { id: randomId, name: "customer service" },
+  { id: 1, name: "amazon miniTV" },
+  { id: 2, name: "sell" },
+  { id: 3, name: "best sellers" },
+  { id: 4, name: "today's deals" },
+  { id: 5, name: "mobiles" },
+  { id: 6, name: "new releases" },
+  { id: 7, name: "customer service" },
 ];
 const AllMenus2 = [
-  { id: randomId, name: "electronics" },
-  { id: randomId, name: "home & kitchen" },
-  { id: randomId, name: "fashion" },
-  { id: randomId, name: "gift ideas" },
-  { id: randomId, name: "amazon pay" },
+  { id: 8, name: "electronics" },
+  { id: 9, name: "home & kitchen" },
+  { id: 10, name: "fashion" },
+  { id: 12, name: "gift ideas" },
+  { id: 13, name: "amazon pay" },
 ];
 
 const BreadCrumb = () => {
   return (
-    <>
-      <HStack
-        bg={"#0d1116"}
-        color={"white"}
-        justifyContent={"space-between"}
-        px={2}
-        py={1}
-      >
-        <DrawerMenu />
-
-        {AllMenus1.map((item) => (
-          <HStack
-            key={item.id}
-            _hover={{ outline: "1px solid white", rounded: "sm" }}
-            px={1}
-            py={2}
-            cursor={"pointer"}
-          >
-            <Text textTransform={"capitalize"} fontSize={"sm"}>
-              {item.name}
-            </Text>
-          </HStack>
-        ))}
-        <HStack
-          pos={"relative"}
-          _hover={{ outline: "1px solid white", rounded: "sm" }}
+    <HStack
+      w={"100vw"}
+      bg={"#0d1116"}
+      px={2}
+      py={1}
+      color={"white"}
+      justifyContent={"space-between"}
+    >
+      <DrawerMenu />
+      {AllMenus1.map((item) => (
+        <Text
+          textTransform={"capitalize"}
+          key={item.id}
+          py={1}
           px={1}
-          pe={4}
-          py={2}
+          fontSize={"sm"}
+          _hover={{ outline: "1px solid white", rounded: "sm" }}
         >
-          <Text>Prime</Text>
-          <Menu>
-            <MenuButton
-              as={TriangleDownIcon}
-              fontSize={"9px"}
-              pos={"absolute"}
-              top={"18px"}
-              right={"-1px"}
-              me={1}
-            />
-            <MenuList color={"black"}>
-              <Text fontSize={"sm"} px={1}>
-                Prime Flyout
-              </Text>
-            </MenuList>
-          </Menu>
-        </HStack>
-        {AllMenus2.map((item) => (
-          <HStack
-            key={item.id}
-            _hover={{ outline: "1px solid white", rounded: "sm" }}
-            px={1}
-            py={2}
-            cursor={"pointer"}
-          >
-            <Text textTransform={"capitalize"} fontSize={"sm"}>
-              {item.name}
+          {item.name}
+        </Text>
+      ))}
+      <HStack
+        pos={"relative"}
+        justifyContent={"space-between"}
+        _hover={{ outline: "1px solid white", rounded: "sm" }}
+        px={1}
+        pe={4}
+      >
+        <Text>Prime</Text>
+        <Menu>
+          <MenuButton
+            as={TriangleDownIcon}
+            fontSize={"9px"}
+            pos={"absolute"}
+            top={"10px"}
+            right={"-1px"}
+            me={1}
+          />
+          <MenuList color={"black"}>
+            <Text fontSize={"sm"} px={1}>
+              Prime Flyout
             </Text>
-          </HStack>
-        ))}
+          </MenuList>
+        </Menu>
       </HStack>
-    </>
+
+      {AllMenus2.map((item) => (
+        <Text
+          py={1}
+          px={1}
+          textTransform={"capitalize"}
+          key={item.id}
+          fontSize={"sm"}
+          _hover={{ outline: "1px solid white", rounded: "sm" }}
+        >
+          {item.name}
+        </Text>
+      ))}
+    </HStack>
   );
 };
 
